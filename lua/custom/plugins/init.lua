@@ -5,7 +5,6 @@
 return {
   'epwalsh/obsidian.nvim',
   version = '*', -- recommended, use latest release instead of latest commit
-  conceallevel = 1,
   lazy = false,
   ft = 'markdown',
   -- Replace the above line with this if you only want to load obsidian.nvim for markdown files in your vault:
@@ -35,4 +34,5 @@ return {
 
     -- see below for full list of options 👇
   },
+  vim.keymap.set('n', '<C-l>', '<C-w>w', { desc = 'Switch Vim Panes' }),
 }
