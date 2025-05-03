@@ -25,7 +25,7 @@ return {
       workspaces = {
         {
           name = 'farglyNotes',
-          path = '/home/fargly/Projects/Fargly/fNv5',
+          path = '~/Projects/Fargly/fNv5',
         },
         -- {
         --   name = 'work',
@@ -47,5 +47,6 @@ return {
       require('render-markdown').setup {}
     end,
   },
-  vim.api.nvim_set_keymap('i', 'jj', '<Esc>', { noremap = true, silent = true }),
+  vim.keymap.set('i', 'jj', '<Esc>', { noremap = true, silent = true }),
+  { 'nvim-tree/nvim-web-devicons', opts = {} },
 }
