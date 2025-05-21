@@ -35,6 +35,7 @@ return {
 
       -- see below for full list of options 👇
     },
+    -- vim.opt.conceallevel = 2
     vim.keymap.set('n', '<C-l>', '<C-w>w', { desc = 'Switch Vim Panes' }),
   },
   {
