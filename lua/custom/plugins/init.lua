@@ -18,14 +18,25 @@ return {
           path = '~/Projects/Fargly/fNv5',
         },
       },
+      
+      ui = {
+        checkboxes = {
+          [" "] = { char = "☐", hl_group = "ObsidianTodo" },
+          ["x"] = { char = "☑", hl_group = "ObsidianDone" },
+        }
+      }
+
+      
     },
     config = function(_, opts)
       require('obsidian').setup(opts)
+      -- Set encoding to utf-8
+      vim.opt.encoding = 'utf-8'
       -- Set conceallevel = 2 only for markdown buffers
       vim.api.nvim_create_autocmd('FileType', {
         pattern = 'markdown',
         callback = function()
-          vim.opt_local.conceallevel = 1
+          vim.opt_local.conceallevel = 2
         end,
       })
       -- Keymap for switching panes
