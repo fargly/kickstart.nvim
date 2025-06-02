@@ -18,15 +18,13 @@ return {
           path = '~/Projects/Fargly/fNv5',
         },
       },
-      
+
       ui = {
         checkboxes = {
-          [" "] = { char = "☐", hl_group = "ObsidianTodo" },
-          ["x"] = { char = "☑", hl_group = "ObsidianDone" },
-        }
-      }
-
-      
+          [' '] = { char = '☐', hl_group = 'ObsidianTodo' },
+          ['x'] = { char = '☑', hl_group = 'ObsidianDone' },
+        },
+      },
     },
     config = function(_, opts)
       require('obsidian').setup(opts)
@@ -41,6 +39,14 @@ return {
       })
       -- Keymap for switching panes
       vim.keymap.set('n', '<C-l>', '<C-w>w', { desc = 'Switch Vim Panes', buffer = true })
+    end,
+  },
+  {
+    'marianozunino/presenterm.nvim',
+    config = function()
+      require('presenterm').setup {
+        -- your configuration options here
+      }
     end,
   },
   {
