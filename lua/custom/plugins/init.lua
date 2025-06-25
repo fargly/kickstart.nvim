@@ -63,17 +63,24 @@ return {
     end,
   },
   { 'nvim-tree/nvim-web-devicons', opts = {} },
-
---   -- Individual Configuration Items
 --   {
---     config = function()
---       vim.keymap.set('i', 'jj', '<Esc>', { noremap = true, silent = true })
---       vim.o.relativenumber = true
---       vim.opt.expandtab = true
---       vim.opt.shiftwidth = 4
---       vim.opt.tabstop = 4
---       vim.opt.softtabstop = 4
---     end,
+--   'Kicamon/markdown-table-mode.nvim',
+--   config = function()
+--     require('markdown-table-mode').setup()
+--   end
 --   },
+  {
+    'SCJangra/table-nvim',
+    ft = 'markdown',
+    opts = {},
+  },
+  { "timantipov/md-table-tidy.nvim",
+    -- default config
+    opts = {
+      padding = 1,        -- number of spaces for cell padding
+      key = "<leader>tt", -- key for command :TableTidy<CR>
+    }
+  },
+
 } 
 
