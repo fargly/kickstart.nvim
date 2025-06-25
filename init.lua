@@ -102,11 +102,6 @@ vim.g.have_nerd_font = false
 vim.o.number = true
 -- You can also add relative line numbers, to help with jumping.
 --  Experiment for yourself to see if you like it!
-vim.o.relativenumber = true
-vim.opt.expandtab = true      -- Use spaces instead of tabs
-vim.opt.shiftwidth = 4        -- Size of an indent
-vim.opt.tabstop = 4           -- Number of spaces tabs count for
-vim.opt.softtabstop = 4       -- Number of spaces that a <Tab> counts for
 
 
 -- Enable mouse mode, can be useful for resizing splits for example!

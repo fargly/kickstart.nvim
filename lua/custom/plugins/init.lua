@@ -2,6 +2,15 @@
 --  I promise not to create any merge conflicts in this directory :)
 --
 -- See the kickstart.nvim README for more information
+
+-- Individual Configuration Items
+vim.keymap.set('i', 'jj', '<Esc>', { noremap = true, silent = true })
+vim.o.relativenumber = true
+vim.opt.expandtab = true
+vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+
 return {
   {
     'epwalsh/obsidian.nvim',
@@ -53,6 +62,18 @@ return {
       require('render-markdown').setup {}
     end,
   },
-  vim.keymap.set('i', 'jj', '<Esc>', { noremap = true, silent = true }),
   { 'nvim-tree/nvim-web-devicons', opts = {} },
-}
+
+--   -- Individual Configuration Items
+--   {
+--     config = function()
+--       vim.keymap.set('i', 'jj', '<Esc>', { noremap = true, silent = true })
+--       vim.o.relativenumber = true
+--       vim.opt.expandtab = true
+--       vim.opt.shiftwidth = 4
+--       vim.opt.tabstop = 4
+--       vim.opt.softtabstop = 4
+--     end,
+--   },
+} 
+
